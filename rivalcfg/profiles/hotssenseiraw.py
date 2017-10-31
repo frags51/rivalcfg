@@ -1,12 +1,9 @@
 hotssenseiraw = {
     "name": "SteelSeries Heroes of the Storm (Sensei Raw)",
 
-    "vendor_id": "1038",
-    "product_id": "1390",
-    "hidraw_interface_number": 0,
-
-    "command_before": None,
-    "command_after": "save",
+    "vendor_id": 0x1038,
+    "product_id": 0x1390,
+    "interface_number": 0,
 
     "commands": {
 
@@ -71,15 +68,13 @@ hotssenseiraw = {
             },
             "default": "high",
         },
-        
 
         "set_mouse_btn_action": {
             "description": "Set mouse button actions",
             "cli": ["-z", "--set-btns"],
             "command": [0x31, 0x00],
-            "value_type": "btn_map",
+            "value_type": "hotsbtnmap",
         },
-
 
         "save": {
             "description": "Save the configuration to the mouse memory",
