@@ -106,11 +106,6 @@ def hotsbtnmap_to_list(kstring):
     if not len(kstring) == 8:
         raise ValueError("Invalid length of argument to Set Button Commands!")
     for x in range(0, 8):
-<<<<<<< HEAD
-        #kstring[0] = kstring[0][1:] #First char of first string is '=' for some reason 
-        #In this version, that is not required.
-=======
->>>>>>> 770ad0a09827b09ff8ce75dd3020e33fee9594b4
         dd = kstring[x].lower()
         if dd in NAMED_KEYS:
             outlist.append(NAMED_KEYS[kstring[x]])
@@ -127,17 +122,10 @@ def hotsbtnmap_to_list(kstring):
                 outlist.append([0x10, ord(dd) - ord("1") + 0x1E, 0x00])
             continue
 
-<<<<<<< HEAD
-        raise ValueError("Invalid entry key name: %s" % dd)
-    
-    return outlist #It is a list of lists.
-#keymap_to_string ends
-=======
         raise ValueError("Invalid entry key name")
 
     return outlist  # It is a list of lists.
 
->>>>>>> 770ad0a09827b09ff8ce75dd3020e33fee9594b4
 
 def choices_to_list(choices):
     """Transforms choices dict to an ordered string list.
